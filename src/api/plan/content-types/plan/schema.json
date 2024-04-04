@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "plans",
+  "info": {
+    "singularName": "plan",
+    "pluralName": "plans",
+    "displayName": "Plan"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "price_per_month": {
+      "type": "integer"
+    },
+    "max_streaming_devices": {
+      "type": "integer"
+    },
+    "user_subscription": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::user-subscription.user-subscription",
+      "mappedBy": "plan"
+    }
+  }
+}

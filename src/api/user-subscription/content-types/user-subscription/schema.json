@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_subscriptions",
+  "info": {
+    "singularName": "user-subscription",
+    "pluralName": "user-subscriptions",
+    "displayName": "User Subscription",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "start_date": {
+      "type": "datetime"
+    },
+    "end_date": {
+      "type": "datetime"
+    },
+    "plan": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::plan.plan",
+      "inversedBy": "user_subscription"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "user_subscription"
+    }
+  }
+}

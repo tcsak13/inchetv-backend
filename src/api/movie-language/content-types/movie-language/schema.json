@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "movie_languages",
+  "info": {
+    "singularName": "movie-language",
+    "pluralName": "movie-languages",
+    "displayName": "Movie Language"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "movies": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::movie.movie",
+      "mappedBy": "movie_languages"
+    }
+  }
+}

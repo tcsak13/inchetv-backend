@@ -1,0 +1,95 @@
+{
+  "kind": "collectionType",
+  "collectionName": "movies",
+  "info": {
+    "singularName": "movie",
+    "pluralName": "movies",
+    "displayName": "Movie",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "release_date": {
+      "type": "date"
+    },
+    "duration": {
+      "type": "integer",
+      "default": 0
+    },
+    "poster": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "casts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::cast.cast",
+      "inversedBy": "movies"
+    },
+    "directors": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::director.director",
+      "inversedBy": "movies"
+    },
+    "maturities": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::maturity.maturity",
+      "inversedBy": "movies"
+    },
+    "movie_languages": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::movie-language.movie-language",
+      "inversedBy": "movies"
+    },
+    "movie_genres": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::movie-genre.movie-genre",
+      "inversedBy": "movies"
+    },
+    "movie_countries": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::movie-country.movie-country",
+      "inversedBy": "movies"
+    },
+    "history": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::history.history",
+      "inversedBy": "movie"
+    },
+    "watchlist": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::watchlist.watchlist",
+      "inversedBy": "movie"
+    },
+    "reviews": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::review.review",
+      "mappedBy": "movie"
+    }
+  }
+}

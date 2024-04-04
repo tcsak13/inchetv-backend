@@ -1,0 +1,40 @@
+{
+  "name": "inchetv-backend",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "@ckeditor/strapi-plugin-ckeditor": "^0.0.11",
+    "@strapi/plugin-cloud": "4.21.1",
+    "@strapi/plugin-i18n": "4.21.1",
+    "@strapi/plugin-users-permissions": "4.21.1",
+    "@strapi/strapi": "4.21.1",
+    "@surunnuage/strapi-plugin-expo-notifications": "^2.0.4",
+    "@webbio/strapi-plugin-scheduler": "^1.0.6",
+    "mysql": "2.18.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "5.3.4",
+    "strapi-plugin-comments": "^2.2.16",
+    "strapi-plugin-local-image-sharp": "^1.7.0",
+    "styled-components": "5.3.3"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "cf5c203d-fecd-49fc-b1cf-a3e8e8563cf9"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
